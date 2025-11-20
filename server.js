@@ -46,6 +46,9 @@ app.use('/api/events', eventRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
 // ✅ 404 handler
 app.use((req, res) => {
   res.status(404).json({
